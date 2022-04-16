@@ -16,7 +16,7 @@ namespace Generics
             double[] doubleArr = { 10.23, 56.34, 67.23 };
             char[] charArr = { 'H', 'E', 'L', 'L', 'O' };
             Console.WriteLine("Please choose program number to Execute");
-            Console.WriteLine("1:Print Array elements without Generics\n2:Print Array elements without Generics\n3:Generic class for printing Array\n");
+            Console.WriteLine("1:Print Array elements without Generics\n2:Print Array elements without Generics\n3:Generic class for printing Array\n4:FindMax\n");
                 int input = Convert.ToInt32(Console.ReadLine());
             
             switch (input)
@@ -44,6 +44,10 @@ namespace Generics
                     new GenericClassForArray<double>(doubleArr).PrintArrayElements();
                     new GenericClassForArray<char>(charArr).PrintArrayElements();
                     // intObj.PrintArrayElements();
+                    break;
+                case 4:
+                    int x = 10, y = 1, z = 56;
+                    Console.WriteLine("{0} is maximum out of {1},{2},{3}", FindMax.FindMaxValue(x, y, z), x, y, z);
                     break;
                 default:
          
