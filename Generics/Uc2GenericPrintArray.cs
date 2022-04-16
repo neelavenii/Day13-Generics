@@ -8,6 +8,11 @@ namespace Generics
 {
     class Uc2GenericPrintArray
     {
+        /// <summary>
+        /// prints the array elements making method has generic
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="arr"></param>
         public static void PrintArrayElements<T>(T[] arr)
         {
             Console.WriteLine("\nArray Elements");

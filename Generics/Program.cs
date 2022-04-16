@@ -16,7 +16,7 @@ namespace Generics
             double[] doubleArr = { 10.23, 56.34, 67.23 };
             char[] charArr = { 'H', 'E', 'L', 'L', 'O' };
             Console.WriteLine("Please choose program number to Execute");
-            Console.WriteLine("1:Print Array elements without Generics\n2:Print Array elements without Generics\n");
+            Console.WriteLine("1:Print Array elements without Generics\n2:Print Array elements without Generics\n3:Generic class for printing Array\n");
                 int input = Convert.ToInt32(Console.ReadLine());
             
             switch (input)
@@ -39,7 +39,14 @@ namespace Generics
                     Uc2GenericPrintArray.PrintArrayElements<double>(doubleArr);
                     Uc2GenericPrintArray.PrintArrayElements<char>(charArr);
                     break;
-                    default:
+                case 3:
+                    new GenericClassForArray<int>(intArr).PrintArrayElements();
+                    new GenericClassForArray<double>(doubleArr).PrintArrayElements();
+                    new GenericClassForArray<char>(charArr).PrintArrayElements();
+                    // intObj.PrintArrayElements();
+                    break;
+                default:
+         
                     break;
             }
             //Console.WriteLine("Welcome To Generics");
