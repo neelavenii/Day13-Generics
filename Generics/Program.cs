@@ -11,12 +11,12 @@ namespace Generics
         
         static void Main(string[] args)
         {
-            
+           
             int[] intArr = { 10, 56, 23 };
             double[] doubleArr = { 10.23, 56.34, 67.23 };
             char[] charArr = { 'H', 'E', 'L', 'L', 'O' };
             Console.WriteLine("Please choose program number to Execute");
-            Console.WriteLine("1:Print Array elements without Generics\n2:Print Array elements without Generics\n3:Generic class for printing Array\n4:FindMax\n5:FloatMaximum");
+            Console.WriteLine("1:Print Array elements without Generics\n2:Print Array elements without Generics\n3:Generic class for printing Array\n4:FindMax\n5:FloatMaximum\n6:StringMaximum\n7:FindMaxUsing Generics");
                 int input = Convert.ToInt32(Console.ReadLine());
             
             switch (input)
@@ -52,9 +52,21 @@ namespace Generics
                 case 5:
                     int x = 10, y = 1,  z= 56;
                     float a = 10.34f, b = 80.43f, c = 34.12f;
-                    Console.WriteLine("{0} is maximum out of {1},{2},{3}", FindMax.FindMaxValue(x, y,z), x,y,z);
+                   Console.WriteLine("{0} is maximum out of {1},{2},{3}", FindMax.FindMaxValue(x, y,z), x,y,z);
                     Console.WriteLine("{0} is maximum out of {1},{2},{3}", FindMax.FindMaxValue((int)a, (int)b, (int)c), a, b, c);
 
+                    break;
+                case 6:
+                   // int x = 10, y = 1, z = 56;
+                    //float a = 10.34f, b = 80.43f, c = 34.12f;
+                   // string d1= "abc", d2 = "pqr", d3 = "xyz";
+                    // Console.WriteLine("{0} is maximum out of {1},{2},{3}", FindMax.FindMaxValue(x, y, z), x, y, z);
+                    //Console.WriteLine("{0} is maximum out of {1},{2},{3}", FindMax.FindMaxValue((int)a, (int)b, (int)c), a, b, c);
+                  //  Console.WriteLine("{0} is maximum out of {1},{2},{3}", FindMax.FindMaxValue((string)d1,(string)d2,(string) d3), d1, d2, d3);
+                    break;
+                case 7:
+                    int k = 10, l = 80, m = 78;
+                    new GenericFindMax<int>(k, l, m).TestMaximum();
                     break;
                 default:
          
